@@ -1,0 +1,23 @@
+<h1>Create new book</h1>
+
+<% if @book.errors.any? %>
+    <h3>Errors</h3>
+    <% @book.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+    <% end %>
+<% end %>
+
+<%= form_with scope: :book, url: books_path, local: true, data: { turbo: false } do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.submit "Create Book" %>
+  </p>
+<% end %>
+

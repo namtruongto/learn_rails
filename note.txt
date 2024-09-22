@@ -1,0 +1,22 @@
+Model name: article 
+Article model file name: article.rb 
+Article model class name: Article 
+Table name: articles
+
+rails db:migrate
+rails db:rollback
+rails db:create
+rails db:drop
+rails db:reset
+rails db:setup
+rails db:seed
+rails db:schema:load
+rails db:migrate:status
+rails db:environment:set
+
+
+The front-end: Show an article
+- Route 
+- Controller#action 
+- Model/db Table
+- View 
